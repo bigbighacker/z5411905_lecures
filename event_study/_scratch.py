@@ -2,6 +2,7 @@
 
 Scratch pad...
 """
+
 import os
 
 import pandas as pd
@@ -9,14 +10,14 @@ import yfinance as yf
 
 import toolkit_config as tk_cfg
 
-
 # ---------------------------------------------------
 # Constants
 # ---------------------------------------------------
 TIC = 'tsla'
 PRC_CSV = os.path.join(tk_cfg.DATADIR , 'tsla_prc.csv')
-START = '2009-01-01'
+START = '1900-01-01'
 END = '2020-12-31'
+
 
 # ---------------------------------------------------
 # get_data0
@@ -35,6 +36,7 @@ def get_data0(tic):
                      end=END,
                      )
     df.to_csv(PRC_CSV)
+
 
 # ---------------------------------------------------
 # get_data1
@@ -55,6 +57,7 @@ def get_data1(tic):
                      end=END,
                      )
     df.to_csv(pth)
+
 
 def load_prc0(tic):
     """ Loads the stock prices saved by get_data
@@ -95,9 +98,12 @@ def load_prc1(tic):
     #   'Volume': 'volume',
     #   }
     df = df.rename(columns=d)
-    print(df)
     df.info()
 
-
 if __name__ == "__main__":
-    load_prc1(TIC)
+    #get_data0(tic=TIC)
+    #get_data1(tic=TIC)
+    #load_prc0(tic=TIC)
+    #load_prc1(tic=TIC)
+    pass
+

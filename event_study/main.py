@@ -1,4 +1,4 @@
-""" main.py
+""" smart_concat.py
 
 Main module for the event_study package. Will run the event study for a single
 stock.
@@ -73,5 +73,7 @@ def main(tic, update_csv=True):
 
 if __name__ == "__main__":
     tic = 'TSLA'
-    update_csv = True
+    update_csv = False
     main(tic=tic, update_csv=update_csv)
+
+
